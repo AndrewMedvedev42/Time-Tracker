@@ -78,23 +78,24 @@ h1{
 
 
 .timerNumbesr{
+  align-items: center;
   font-size: 2rem;
   font-family:Arial, Helvetica, sans-serif;
 }
 
 .TimerButtonStyle button{
-  font-size: 1rem;
-  border-radius: 25px;
-  margin: 10px;
-  padding: 1rem;
-  color:white;
-  letter-spacing: 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  background:rgb(17, 219, 10);
+  color: white;
+  padding: 1rem 1.1rem;
+  margin: 1rem;
+  border-radius: 50px;
   border: none;
+  background-color:rgb(17, 219, 10) ;
 }
 
-.TimerButtonStyle button:nth-child(4){
-  background:rgb(233, 66, 44);
+.TimerButtonStyle button:last-child{
+  background-color: brown;
+}
+
+.TimerButtonStyle button:last-child:hover{
+  background-color: rgb(158, 83, 83);
 }

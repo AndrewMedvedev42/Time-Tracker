@@ -1,5 +1,8 @@
 import React from "react"
 import Timer from 'react-compound-timer'
+import { FaPlay } from 'react-icons/fa';
+import { FaPause } from 'react-icons/fa';
+
 
 
 function Timerz ({name, child}) {
@@ -20,11 +23,11 @@ function Timerz ({name, child}) {
             {/* <div>{timerState}</div> */}
             <br />
             <div className="TimerButtonStyle">
-                <button onClick={start}>Start</button>
-                <button onClick={pause}>Pause</button>
+                <button onClick={start}>{<FaPlay/>}</button>
+                <button onClick={pause}>{<FaPause/>}</button>
                 {/* <button onClick={resume}>Resume</button> */}
                 {/* <button onClick={stop}>Stop</button> */}
-                <button onClick={reset}>Reset</button>
+                {/* <button onClick={reset}>Reset</button> */}
                 {child}
             </div>
         </section>
