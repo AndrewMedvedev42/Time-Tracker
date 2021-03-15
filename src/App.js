@@ -29,13 +29,13 @@ function App() {
       alert(`Name: ${name} already exists!`)
     }else{
       setTimerNameList((prevList)=>[name, ...prevList])
+      localStorage.setItem(name, Date.now())
     }
   },[name, timerNameList])
 
 
   return (
     <section >
-      <button onClick={()=>{localStorage.clear()}}>Remove all</button>
       <div className="mainSection">
       <h1>Tracker</h1>
         <div className="inputSection">

@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Time-Tracker/static/css/main.e49d499c.chunk.css",
-    "main.js": "/Time-Tracker/static/js/main.15f18d32.chunk.js",
-    "main.js.map": "/Time-Tracker/static/js/main.15f18d32.chunk.js.map",
+    "main.js": "/Time-Tracker/static/js/main.f8f36615.chunk.js",
+    "main.js.map": "/Time-Tracker/static/js/main.f8f36615.chunk.js.map",
     "runtime-main.js": "/Time-Tracker/static/js/runtime-main.36c862b1.js",
     "runtime-main.js.map": "/Time-Tracker/static/js/runtime-main.36c862b1.js.map",
     "static/js/2.8c09465c.chunk.js": "/Time-Tracker/static/js/2.8c09465c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.36c862b1.js",
     "static/js/2.8c09465c.chunk.js",
     "static/css/main.e49d499c.chunk.css",
-    "static/js/main.15f18d32.chunk.js"
+    "static/js/main.f8f36615.chunk.js"
   ]
 }
