@@ -14,7 +14,7 @@ h1{
 }
 
 .mainSection{
-  width: 500px;
+  width: 440px;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -86,7 +86,7 @@ h1{
 .TimerButtonStyle button{
   color: white;
   padding: 1rem 1.1rem;
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 50px;
   border: none;
   background-color:rgb(17, 219, 10) ;
