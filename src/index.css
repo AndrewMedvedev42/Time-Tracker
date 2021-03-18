@@ -21,7 +21,6 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
 }
 
 .inputSection{
@@ -30,7 +29,7 @@ h1{
 
 .inputField, .deployButton{
   font-size: larger;
-  padding: 20px 40px;
+  padding: 10px 20px;
   border: none;
 }
 
@@ -73,9 +72,8 @@ h1{
 
 .TimerStyle{
   text-align: center;
-  border-bottom: rgb(197, 197, 197) solid 3px;
+  border-bottom: rgb(197, 197, 197) solid 1.5px;
 }
-
 
 .timerNumbesr{
   align-items: center;
