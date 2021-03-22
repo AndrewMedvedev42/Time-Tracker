@@ -2,14 +2,13 @@ import React from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
 // import Timer from 'react-compound-timer'
-// import { FaPlay } from 'react-icons/fa';
-// import { FaPause } from 'react-icons/fa';
+import { FaPlay } from 'react-icons/fa';
+import { FaPause } from 'react-icons/fa';
+import {FaSquare} from 'react-icons/fa'
 
+function Timerz ({name, child, count}) {
 
-
-function Timerz ({name, child}) {
-
-  const [timer, setTimer] = useState(0)
+  const [timer, setTimer] = useState(count)
   const [isActive, setIsActive] = useState(false)
   const [isPaused, setIsPaused] = useState(false)
   const increment = useRef(null)
@@ -50,6 +49,8 @@ function Timerz ({name, child}) {
     return `${getHours} : ${getMinutes} : ${getSeconds}`
   }
 
+  localStorage.setItem(name, timer)
+
   return (
     <div className="app">
       <h3>{name}</h3>
@@ -58,13 +59,13 @@ function Timerz ({name, child}) {
         <div className='buttons'>
           {
             !isActive && !isPaused ?
-              <button onClick={handleStart}>Start</button>
+              <button onClick={handleStart}><FaPlay/></button>
               : (
-                isPaused ? <button onClick={handlePause}>Pause</button> :
-                  <button onClick={handleResume}>Resume</button>
+                isPaused ? <button onClick={handlePause}><FaPause/></button> :
+                  <button onClick={handleResume}><FaPlay/></button>
               )
           }
-          <button onClick={handleReset} disabled={!isActive}>Reset</button>
+          <button onClick={handleReset} disabled={!isActive}><FaSquare/></button>
           {child}
         </div>
       </div>

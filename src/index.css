@@ -14,86 +14,17 @@ h1{
 }
 
 .mainSection{
-  width: 440px;
-  margin: 0 auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  border:blueviolet dotted 10px;
+  margin:0.5rem;
 }
 
 .inputSection{
-  align-items: center;
+  border:rgb(26, 158, 70) dotted 10px;
+  margin:0.5rem;
 }
 
 .inputField, .deployButton{
-  font-size: larger;
-  padding: 10px 20px;
-  border: none;
+  border:rgb(167, 69, 30) dotted 10px;
+  margin:0.5rem;
 }
 
-.inputField{
-  box-shadow: inset 0px 0px 0px 3px rgb(197, 197, 197);
-  box-sizing: border-box;
-  border-top-left-radius: var(--radius-value);
-  border-bottom-left-radius: var(--radius-value);
-}
-
-.deployButton{
-  color:white;
-  letter-spacing: 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bolder;
-  background:rgb(17, 219, 10);
-  border-left: none;
-  border-top-right-radius: var(--radius-value);
-  border-bottom-right-radius: var(--radius-value);
-}
-
-.deployButton:hover, .TimerButtonStyle button:hover{
-  background:rgb(113, 185, 94);
-}
-
-.deployedTimers{
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-}
-
-.timerTitle{
-  letter-spacing: 2px;
-  font-size: 1.5rem;
-  margin: 1rem;
-  margin-top: 4rem;
-}
-
-.TimerStyle{
-  text-align: center;
-  border-bottom: rgb(197, 197, 197) solid 1.5px;
-}
-
-.timerNumbesr{
-  align-items: center;
-  font-size: 2rem;
-  font-family:Arial, Helvetica, sans-serif;
-}
-
-.TimerButtonStyle button{
-  color: white;
-  padding: 1rem 1.1rem;
-  margin: 0.5rem;
-  border-radius: 50px;
-  border: none;
-  background-color:rgb(17, 219, 10) ;
-}
-
-.TimerButtonStyle button:last-child{
-  background-color: brown;
-}
-
-.TimerButtonStyle button:last-child:hover{
-  background-color: rgb(158, 83, 83);
-}
