@@ -2,7 +2,6 @@ import React from "react"
 import Timerz from "./Stopwatch"
 import { FaTimes } from 'react-icons/fa';
 
-
 //Main app
 function App() {
 
@@ -15,6 +14,13 @@ function App() {
   const onChange = (e) =>{
     setName(e.target.value)
   }
+
+function setExisting(){
+for(let i = 0; i<localStorage.length; i++){
+  setTimerNameList((prevList)=>[localStorage.key(i), ...prevList])
+  console.log(i)
+}}
+
 //function that checks name and sets new name to array
   const addNewTimer = React.useCallback(() => {
     if(name === ""){
@@ -31,17 +37,13 @@ function App() {
 
   const deleteTimer = (name) =>{
     let newTimers = timerNameList.filter((timerName) => timerName !== name)
-    deleteFromLocalStorage(name)//function that deletes key name from localStorage. Craetion of componets with stored names is comming soon  
+    localStorage.removeItem(name)//deletes key name from localStorage. Craetion of componets of stored names is in progress
     setTimerNameList(newTimers)
   }
 
-//deletes keyname 
-  function deleteFromLocalStorage(name){
-    localStorage.removeItem(name)
-  }
-
-  return (
+ return (
     <section >
+      <button className="deployButton" onClick={setExisting}>Set Existing Timers</button>
       <div className="mainSection">
       <h1>Tracker</h1>
         <div className="inputSection">
