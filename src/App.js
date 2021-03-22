@@ -34,12 +34,21 @@ function App() {
     setTimerNameList(newTimers)
   }
 
-  function setExisting(){
+
+
+  const setExisting = () => {
     for(let i =0; i<localStorage.length; i++){
     let key = localStorage.key(i)
-    setTimerNameList((prevList)=>[key, ...prevList])
-    }
-  }
+
+    if(timerNameList.some((item)=> item === key)){
+      console.log(`Sorry,${key} already deployed!`)
+
+    }else{
+      setTimerNameList((prevList)=>[key, ...prevList])
+
+    }}}
+
+
 
   function checkCount(name){
     if(localStorage.getItem(name) !== 0){
