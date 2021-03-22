@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Time-Tracker/static/css/main.fedceee8.chunk.css",
-    "main.js": "/Time-Tracker/static/js/main.878ec3a5.chunk.js",
-    "main.js.map": "/Time-Tracker/static/js/main.878ec3a5.chunk.js.map",
+    "main.css": "/Time-Tracker/static/css/main.2db511ed.chunk.css",
+    "main.js": "/Time-Tracker/static/js/main.5ea87f98.chunk.js",
+    "main.js.map": "/Time-Tracker/static/js/main.5ea87f98.chunk.js.map",
     "runtime-main.js": "/Time-Tracker/static/js/runtime-main.348fb472.js",
     "runtime-main.js.map": "/Time-Tracker/static/js/runtime-main.348fb472.js.map",
-    "static/js/2.07c7577b.chunk.js": "/Time-Tracker/static/js/2.07c7577b.chunk.js",
-    "static/js/2.07c7577b.chunk.js.map": "/Time-Tracker/static/js/2.07c7577b.chunk.js.map",
+    "static/js/2.3490e8c9.chunk.js": "/Time-Tracker/static/js/2.3490e8c9.chunk.js",
+    "static/js/2.3490e8c9.chunk.js.map": "/Time-Tracker/static/js/2.3490e8c9.chunk.js.map",
     "static/js/3.339488dd.chunk.js": "/Time-Tracker/static/js/3.339488dd.chunk.js",
     "static/js/3.339488dd.chunk.js.map": "/Time-Tracker/static/js/3.339488dd.chunk.js.map",
     "index.html": "/Time-Tracker/index.html",
-    "static/css/main.fedceee8.chunk.css.map": "/Time-Tracker/static/css/main.fedceee8.chunk.css.map",
-    "static/js/2.07c7577b.chunk.js.LICENSE.txt": "/Time-Tracker/static/js/2.07c7577b.chunk.js.LICENSE.txt"
+    "static/css/main.2db511ed.chunk.css.map": "/Time-Tracker/static/css/main.2db511ed.chunk.css.map",
+    "static/js/2.3490e8c9.chunk.js.LICENSE.txt": "/Time-Tracker/static/js/2.3490e8c9.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.348fb472.js",
-    "static/js/2.07c7577b.chunk.js",
-    "static/css/main.fedceee8.chunk.css",
-    "static/js/main.878ec3a5.chunk.js"
+    "static/js/2.3490e8c9.chunk.js",
+    "static/css/main.2db511ed.chunk.css",
+    "static/js/main.5ea87f98.chunk.js"
   ]
 }

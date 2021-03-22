@@ -52,20 +52,20 @@ function Timerz ({name, child, count}) {
   localStorage.setItem(name, timer)
 
   return (
-    <div className="app">
+    <div className="timerSection">
       <h3>{name}</h3>
-      <div className='stopwatch-card'>
+      <div className='timerSecMinHour'>
         <p>{formatTime()}</p>
-        <div className='buttons'>
+        <div className='buttonsSection'>
           {
             !isActive && !isPaused ?
-              <button onClick={handleStart}><FaPlay/></button>
+              <button class="btn btnPlay" onClick={handleStart}><FaPlay/></button>
               : (
-                isPaused ? <button onClick={handlePause}><FaPause/></button> :
-                  <button onClick={handleResume}><FaPlay/></button>
+                isPaused ? <button class="btn pauseBtn" onClick={handlePause}><FaPause/></button> :
+                  <button class="btn btnPlay" onClick={handleResume}><FaPlay/></button>
               )
           }
-          <button onClick={handleReset} disabled={!isActive}><FaSquare/></button>
+          <button class="btn btnReset" onClick={handleReset} disabled={!isActive}><FaSquare/></button>
           {child}
         </div>
       </div>

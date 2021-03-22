@@ -13,18 +13,68 @@ h1{
   font-size: 3rem;
 }
 
-.mainSection{
-  border:blueviolet dotted 10px;
-  margin:0.5rem;
+p{
+  margin: 0;
 }
 
-.inputSection{
-  border:rgb(26, 158, 70) dotted 10px;
-  margin:0.5rem;
+.mainSection{
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .inputField, .deployButton{
-  border:rgb(167, 69, 30) dotted 10px;
-  margin:0.5rem;
+  padding: 15px 30px;
+  border: none;
 }
 
+.inputField{
+  box-shadow:inset 0px 0px 0px 5px rgb(184, 184, 184);
+  border-top-left-radius: var(--radius-value);
+  border-bottom-left-radius: var(--radius-value);
+}
+
+.deployButton{
+  background-color: rgb(50, 214, 50);
+  border-top-right-radius: var(--radius-value);
+  border-bottom-right-radius: var(--radius-value);
+}
+
+.deployedTimers{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.timerSection{
+  width: 300px;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: rgb(184, 184, 184) solid 2px;
+}
+
+.timerSecMinHour{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.btn{
+  margin: 1rem;
+  color: white;
+  border:none;
+  border-radius: 25px;
+  padding: 13px 15px;
+}
+
+.btnPlay, .pauseBtn{
+  background-color: rgb(50, 214, 50);
+}
+
+.btnReset{
+  background-color: rgb(255, 204, 0);
+}
+
+.btnClose{
+  background-color: crimson;
+}

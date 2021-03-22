@@ -1,6 +1,7 @@
 import React from "react"
 import Timerz from "./Stopwatch"
-import { FaTimes } from 'react-icons/fa';
+import {FaTimes } from 'react-icons/fa';
+import "./index.css"
 
 //Main app
 function App() {
@@ -41,7 +42,7 @@ function App() {
     let key = localStorage.key(i)
 
     if(timerNameList.some((item)=> item === key)){
-      console.log(`Sorry,${key} already deployed!`)
+      alert(`Sorry,${key} already deployed!`)
 
     }else{
       setTimerNameList((prevList)=>[key, ...prevList])
@@ -69,7 +70,7 @@ function App() {
         </div>
       </div>
       <div className="deployedTimers" >
-        {timerNameList.map((item)=><Timerz key={item} name={item} count={checkCount(item)} child={<button onClick={()=>(deleteTimer(item))}>{<FaTimes size={15}/>}</button>}/>)}
+        {timerNameList.map((item)=><Timerz key={item} name={item} count={checkCount(item)} child={<button class="btn btnClose" onClick={()=>(deleteTimer(item))}>{<FaTimes size={16}/>}</button>}/>)}
       </div>
     </section>
   );
