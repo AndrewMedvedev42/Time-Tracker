@@ -28,7 +28,7 @@ p{
 }
 
 .inputField{
-  box-shadow:inset 0px 0px 0px 5px rgb(184, 184, 184);
+  box-shadow:inset 0px 0px 0px 3px rgb(184, 184, 184);
   border-top-left-radius: var(--radius-value);
   border-bottom-left-radius: var(--radius-value);
 }
@@ -36,7 +36,7 @@ p{
 .deployButton{
   font-weight: bolder;
   letter-spacing: 3px;
-  background-color: rgb(50, 214, 50);
+  background-color: rgb(102, 194, 255);
   border-top-right-radius: var(--radius-value);
   border-bottom-right-radius: var(--radius-value);
 }
@@ -66,11 +66,11 @@ p{
   color: white;
   border:none;
   border-radius: 25px;
-  padding: 13px 15px;
+  padding: 13px 25px;
 }
 
 .btnPlay, .pauseBtn{
-  background-color: rgb(50, 214, 50);
+  background-color: rgb(102, 194, 255);
 }
 
 .btnReset{
@@ -79,4 +79,19 @@ p{
 
 .btnClose{
   background-color: crimson;
+}
+
+.btnPlay:hover, .pauseBtn:hover, .deployButton:hover{
+  transition: 0.5s;
+  background-color: rgb(0, 153, 255);
+}
+
+.btnClose:hover{
+  transition: 0.5s;
+  background-color: rgb(153, 0, 0);
+}
+
+.btnReset:hover{
+  transition: 0.5s;
+  background-color: rgb(230, 153, 0);
 }
