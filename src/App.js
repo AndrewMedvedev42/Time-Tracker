@@ -1,6 +1,7 @@
 import React from "react"
 import Timerz from "./Stopwatch"
 import {FaTimes } from 'react-icons/fa';
+import {FaPlus } from 'react-icons/fa';
 import "./index.css"
 
 //Main app
@@ -61,12 +62,12 @@ function App() {
 
  return (
     <section >
-      <button className="deployButton" onClick={setExisting}>Show Existing Timers</button>
+      <button className="deployButton deployedTimersButton" onClick={setExisting}>Show Existing Timers</button>
       <div className="mainSection">
       <h1>Tracker</h1>
         <div className="inputSection">
           <input className="inputField" value={name} onChange={onChange}/>
-          <button className="deployButton" onClick={addNewTimer}>Craete</button>
+          <button className="deployButton" onClick={addNewTimer}><FaPlus size={13}/></button>
         </div>
       </div>
       <div className="deployedTimers" >

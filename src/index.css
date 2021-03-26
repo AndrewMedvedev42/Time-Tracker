@@ -23,23 +23,31 @@ p{
 }
 
 .inputField, .deployButton{
-  padding: 15px 30px;
+  padding: 15px 20px;
   border: none;
 }
 
 .inputField{
+  width: 250px;
+  font-size: 1rem;
   box-shadow:inset 0px 0px 0px 3px rgb(184, 184, 184);
   border-top-left-radius: var(--radius-value);
   border-bottom-left-radius: var(--radius-value);
 }
 
 .deployButton{
+  cursor: pointer;
   font-weight: bolder;
-  letter-spacing: 3px;
-  color: rgb(66, 66, 66);
-  background-color: rgb(102, 194, 255);
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 136, 77);
   border-top-right-radius: var(--radius-value);
   border-bottom-right-radius: var(--radius-value);
+}
+
+.deployedTimersButton{
+
+  font-size: larger;
 }
 
 .deployedTimers{
@@ -63,6 +71,7 @@ p{
 }
 
 .btn{
+  cursor: pointer;
   margin: 1rem;
   color: white;
   border:none;
@@ -71,7 +80,7 @@ p{
 }
 
 .btnPlay, .pauseBtn{
-  background-color: rgb(102, 194, 255);
+  background-color: rgb(255, 136, 77);
 }
 
 .btnReset{
@@ -84,7 +93,7 @@ p{
 
 .btnPlay:hover, .pauseBtn:hover, .deployButton:hover{
   transition: 0.5s;
-  background-color: rgb(0, 153, 255);
+  background-color: rgb(255, 119, 51);
 }
 
 .btnClose:hover{
@@ -103,9 +112,6 @@ p{
   }
 
   .deployButton, .inputField{
-    font-size: larger;
-    padding: 20px;
+    padding: 20px 40px;
   }
-
-
 }
