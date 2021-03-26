@@ -36,6 +36,7 @@ p{
 .deployButton{
   font-weight: bolder;
   letter-spacing: 3px;
+  color: rgb(66, 66, 66);
   background-color: rgb(102, 194, 255);
   border-top-right-radius: var(--radius-value);
   border-bottom-right-radius: var(--radius-value);
@@ -94,4 +95,17 @@ p{
 .btnReset:hover{
   transition: 0.5s;
   background-color: rgb(230, 153, 0);
+}
+
+@media screen and (min-width: 600px) {
+  .inputField{
+    width: 300px;
+  }
+
+  .deployButton, .inputField{
+    font-size: larger;
+    padding: 20px;
+  }
+
+
 }
