@@ -36,8 +36,6 @@ function App() {
     setTimerNameList(newTimers)
   }
 
-
-
   const setExisting = () => {
     for(let i =0; i<localStorage.length; i++){
     let key = localStorage.key(i)
@@ -49,8 +47,6 @@ function App() {
       setTimerNameList((prevList)=>[key, ...prevList])
 
     }}}
-
-
 
   function checkCount(name){
     if(localStorage.getItem(name) !== 0){

@@ -30,7 +30,7 @@ function Timerz ({name, child, count}) {
     setIsPaused(true)
     increment.current = setInterval(() => {
       setTimer((timer) => timer + 1)
-    }, 5)
+    }, 1000)
   }
 
   const handleReset = () => {
