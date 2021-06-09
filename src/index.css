@@ -1,7 +1,7 @@
 :root{
   --radius-value:50px;
   --input-section-border-thiknes:calc(8px/2);
-  --main-color:rgb(19, 92, 22);
+  --main-color:#800080;
 }
 
 body{
@@ -88,7 +88,7 @@ p{
 
 .btnPlay:hover, .pauseBtn:hover, .deployButton:hover{
   transition: 0.5s;
-  background-color: rgb(255, 119, 51);
+  background-color: #cc00cc;
 }
 
 .btnClose:hover{
