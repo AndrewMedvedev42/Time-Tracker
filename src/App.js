@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Timerz from "./Stopwatch"
 import {FaTimes } from 'react-icons/fa';
 import {FaPlus } from 'react-icons/fa';
@@ -36,17 +36,21 @@ function App() {
     setTimerNameList(newTimers)
   }
 
-  const setExisting = () => {
+  useEffect(()=>{
     for(let i =0; i<localStorage.length; i++){
-    let key = localStorage.key(i)
+      let key = localStorage.key(i)
+  
+      if(timerNameList.some((item)=> item === key)){
+        console.log(`${key} already deployed!`)
+  
+      }else{
+        setTimerNameList((prevList)=>[key, ...prevList])
+  
+      }}
+  })
 
-    if(timerNameList.some((item)=> item === key)){
-      alert(`Sorry,${key} already deployed!`)
-
-    }else{
-      setTimerNameList((prevList)=>[key, ...prevList])
-
-    }}}
+//   const setExisting = () => {
+// }
 
   function checkCount(name){
     if(localStorage.getItem(name) !== 0){
@@ -58,7 +62,7 @@ function App() {
 
  return (
     <section >
-      <button className="deployButton deployedTimersButton" onClick={setExisting}>Show Existing Timers</button>
+      {/* <button className="deployButton deployedTimersButton" onClick={setExisting}>Show Existing Timers</button> */}
       <div className="mainSection">
       <h1>Tracker</h1>
         <div className="inputSection">
@@ -67,7 +71,7 @@ function App() {
         </div>
       </div>
       <div className="deployedTimers" >
-        {timerNameList.map((item)=><Timerz key={item} name={item} count={checkCount(item)} child={<button class="btn btnClose" onClick={()=>(deleteTimer(item))}>{<FaTimes size={16}/>}</button>}/>)}
+        {timerNameList.map((item)=><Timerz key={item} name={item} count={checkCount(item)} child={<button className="btn btnClose" onClick={()=>(deleteTimer(item))}>{<FaTimes size={16}/>}</button>}/>)}
       </div>
     </section>
   );

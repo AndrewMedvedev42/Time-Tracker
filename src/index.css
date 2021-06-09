@@ -45,11 +45,6 @@ p{
   border-bottom-right-radius: var(--radius-value);
 }
 
-.deployedTimersButton{
-
-  font-size: larger;
-}
-
 .deployedTimers{
   align-items: center;
   display: flex;

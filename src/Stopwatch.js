@@ -59,13 +59,13 @@ function Timerz ({name, child, count}) {
         <div className='buttonsSection'>
           {
             !isActive && !isPaused ?
-              <button class="btn btnPlay" onClick={handleStart}><FaPlay/></button>
+              <button className="btn btnPlay" onClick={handleStart}><FaPlay/></button>
               : (
                 isPaused ? <button class="btn pauseBtn" onClick={handlePause}><FaPause/></button> :
-                  <button class="btn btnPlay" onClick={handleResume}><FaPlay/></button>
+                  <button className="btn btnPlay" onClick={handleResume}><FaPlay/></button>
               )
           }
-          <button class="btn btnReset" onClick={handleReset} disabled={!isActive}><FaSquare/></button>
+          <button className="btn btnReset" onClick={handleReset} disabled={!isActive}><FaSquare/></button>
           {child}
         </div>
       </div>
