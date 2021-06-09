@@ -40,7 +40,7 @@ p{
   font-weight: bolder;
   letter-spacing: 1px;
   color: rgb(255, 255, 255);
-  background-color: rgb(255, 136, 77);
+  background-color: var(--main-color);
   border-top-right-radius: var(--radius-value);
   border-bottom-right-radius: var(--radius-value);
 }
@@ -75,7 +75,7 @@ p{
 }
 
 .btnPlay, .pauseBtn{
-  background-color: rgb(255, 136, 77);
+  background-color: var(--main-color);
 }
 
 .btnReset{
