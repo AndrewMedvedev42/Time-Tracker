@@ -64,6 +64,7 @@ function App() {
     <section >
       {/* <button className="deployButton deployedTimersButton" onClick={setExisting}>Show Existing Timers</button> */}
       <div className="mainSection">
+      <p className="notice">Type a name of your timer, in the input field and submit it to create a timer</p>
       <h1>Tracker</h1>
         <div className="inputSection">
           <input className="inputField" value={name} onChange={onChange}/>
