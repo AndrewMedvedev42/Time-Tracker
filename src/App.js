@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
-import Timerz from "./Stopwatch"
-import {FaTimes } from 'react-icons/fa';
-import {FaPlus } from 'react-icons/fa';
+import Stopwatch from "./Stopwatch"
+import {FaTimes, FaRegClock, FaPlus } from 'react-icons/fa';
+import FadeIn from 'react-fade-in';
 import "./index.css"
 
 //Main app
@@ -36,21 +36,16 @@ function App() {
     setTimerNameList(newTimers)
   }
 
+  //sets timer data from localstorage to timerNameList
   useEffect(()=>{
     for(let i =0; i<localStorage.length; i++){
       let key = localStorage.key(i)
-  
       if(timerNameList.some((item)=> item === key)){
-        console.log(`${key} already deployed!`)
-  
+        return ""
       }else{
         setTimerNameList((prevList)=>[key, ...prevList])
-  
       }}
-  })
-
-//   const setExisting = () => {
-// }
+  },[])
 
   function checkCount(name){
     if(localStorage.getItem(name) !== 0){
@@ -62,18 +57,21 @@ function App() {
 
  return (
     <section >
-      {/* <button className="deployButton deployedTimersButton" onClick={setExisting}>Show Existing Timers</button> */}
-      <div className="mainSection">
+      <section className="main-section">
       <p className="notice">Type a name of your timer, in the input field and submit it to create a timer</p>
-      <h1>Tracker</h1>
-        <div className="inputSection">
-          <input className="inputField" value={name} onChange={onChange}/>
-          <button className="deployButton" onClick={addNewTimer}><FaPlus size={13}/></button>
+      <h1>Stop{<FaRegClock size={42}/>}Watch</h1>
+        <div className="input-section">
+          <div className="form">
+            <input className="input-field" value={name} onChange={onChange}/>
+            <button className="deploy-button" onClick={addNewTimer}><FaPlus size={13}/></button>
+          </div>
         </div>
-      </div>
-      <div className="deployedTimers" >
-        {timerNameList.map((item)=><Timerz key={item} name={item} count={checkCount(item)} child={<button className="btn btnClose" onClick={()=>(deleteTimer(item))}>{<FaTimes size={16}/>}</button>}/>)}
-      </div>
+      </section>
+      <section className="timer-list">
+        <FadeIn>
+        {timerNameList.map((item)=><Stopwatch key={item} name={item} count={checkCount(item)} child={<button className="button button-delete" onClick={()=>(deleteTimer(item))}>{<FaTimes size={16}/>}</button>}/>)}
+        </FadeIn>
+      </section>
     </section>
   );
 }

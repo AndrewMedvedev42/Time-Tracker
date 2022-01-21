@@ -1,12 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { useRef } from 'react';
-// import Timer from 'react-compound-timer'
 import { FaPlay } from 'react-icons/fa';
 import { FaPause } from 'react-icons/fa';
 import {FaSquare} from 'react-icons/fa'
 
-function Timerz ({name, child, count}) {
+//Stopwatch component
+function Stopwatch ({name, child, count}) {
 
   const [timer, setTimer] = useState(count)
   const [isActive, setIsActive] = useState(false)
@@ -52,54 +52,23 @@ function Timerz ({name, child, count}) {
   localStorage.setItem(name, timer)
 
   return (
-    <div className="timerSection">
-      <h3>{name}</h3>
-      <div className='timerSecMinHour'>
-        <p>{formatTime()}</p>
-        <div className='buttonsSection'>
+    <article className="timer-container">
+      <h2 className="timer-name">{name}</h2>
+      <p className="timer-time">{formatTime()}</p>
+        <section className='button-section'>
           {
             !isActive && !isPaused ?
-              <button className="btn btnPlay" onClick={handleStart}><FaPlay/></button>
+              <button className="button button-play" onClick={handleStart}><FaPlay/></button>
               : (
-                isPaused ? <button class="btn pauseBtn" onClick={handlePause}><FaPause/></button> :
-                  <button className="btn btnPlay" onClick={handleResume}><FaPlay/></button>
+                isPaused ? <button class="button pause-button" onClick={handlePause}><FaPause/></button> :
+                  <button className="button button-play" onClick={handleResume}><FaPlay/></button>
               )
           }
-          <button className="btn btnReset" onClick={handleReset} disabled={!isActive}><FaSquare/></button>
+          <button className="button button-reset" onClick={handleReset} disabled={!isActive}><FaSquare/></button>
           {child}
-        </div>
-      </div>
-    </div>
+        </section>
+    </article>
   );
 }
 
-//   return (<Timer
-//     initialTime={0}
-//     startImmediately={false}>
-
-//     {({ start, resume, pause, stop, reset, timerState }) => (
-//         <section className="TimerStyle">
-//           <h3 className="timerTitle">{`${name}`}</h3>
-//             <div className="timerNumbesr">
-//                 <Timer.Days />:
-//                 <Timer.Hours/>:
-//                 <Timer.Minutes/>:
-//                 <Timer.Seconds/>
-//                 {/* <Timer.Milliseconds /> milliseconds */}
-//             </div>
-//             {/* <div>{timerState}</div> */}
-//             <br />
-//             <div className="TimerButtonStyle">
-//                 <button onClick={start}>{<FaPlay/>}</button>
-//                 <button onClick={pause}>{<FaPause/>}</button>
-//                 {/* <button onClick={resume}>Resume</button> */}
-//                 {/* <button onClick={stop}>Stop</button> */}
-//                 {/* <button onClick={reset}>Reset</button> */}
-//                 {child}
-//             </div>
-//         </section>
-//     )}
-// </Timer>)
-
-
-export default Timerz;
+export default Stopwatch;

@@ -1,10 +1,15 @@
 :root{
   --radius-value:50px;
   --input-section-border-thiknes:calc(8px/2);
-  --main-color:#800080;
+  --main-color:coral;
+}
+
+*{
+  transition: 0.5s;
 }
 
 body{
+  text-align: center;
   font-family:Impact;
 }
 
@@ -14,7 +19,22 @@ h1{
 }
 
 p{
+
   margin: 0;
+}
+
+button{
+  color: white;
+  outline: none;
+  border:none;
+}
+
+button:hover{
+  opacity: 0.7;
+}
+
+button:active{
+  opacity: 0.5;
 }
 
 .notice{
@@ -22,93 +42,66 @@ p{
   font-family: 'Courier New', Courier, monospace;
 }
 
-.mainSection{
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.inputField, .deployButton{
-  padding: 15px 20px;
-  border: none;
-}
-
-.inputField{
-  width: 250px;
-  font-size: 1rem;
-  box-shadow:inset 0px 0px 0px 3px rgb(184, 184, 184);
-  border-top-left-radius: var(--radius-value);
-  border-bottom-left-radius: var(--radius-value);
-}
-
-.deployButton{
-  cursor: pointer;
-  font-weight: bolder;
-  letter-spacing: 1px;
-  color: rgb(255, 255, 255);
-  background-color: var(--main-color);
-  border-top-right-radius: var(--radius-value);
-  border-bottom-right-radius: var(--radius-value);
-}
-
-.deployedTimers{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.timerSection{
-  width: 300px;
-  font-size: 1.2rem;
-  text-align: center;
+.main-section{
   margin-bottom: 2rem;
-  border-bottom: rgb(184, 184, 184) solid 2px;
 }
 
-.timerSecMinHour{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: lighter;
+.input-section{
+  display: flex;
+  justify-content: center;
 }
 
-.btn{
-  cursor: pointer;
-  margin: 1rem;
-  color: white;
+.form{
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 3px 3px 10px;
+}
+
+.input-field,.deploy-button{
+  outline: none;
   border:none;
-  border-radius: 25px;
-  padding: 13px 25px;
+  font-size: 1.5rem;
+  padding: 0.7rem 2rem;
 }
 
-.btnPlay, .pauseBtn{
+.deploy-button{
   background-color: var(--main-color);
 }
 
-.btnReset{
-  background-color: rgb(255, 204, 0);
+.timer-list{
+  display: flex;
+  justify-content: center;
 }
 
-.btnClose{
+.timer-container{
+  width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+.button{
+  margin:0rem 0.5rem;
+  border-radius: 25px;
+  padding: 0.7rem 1.5rem;
+}
+
+.button-play, .pause-button{
+  background-color: var(--main-color);
+}
+
+.button-reset{
+  background-color: gold;
+}
+
+.button-delete{
   background-color: crimson;
 }
 
-.btnPlay:hover, .pauseBtn:hover, .deployButton:hover{
-  transition: 0.5s;
-  background-color: #cc00cc;
-}
-
-.btnClose:hover{
-  transition: 0.5s;
-  background-color: rgb(153, 0, 0);
-}
-
-.btnReset:hover{
-  transition: 0.5s;
-  background-color: rgb(230, 153, 0);
-}
-
 @media screen and (min-width: 600px) {
-  .inputField{
-    width: 300px;
+  .input-field{
+    width: 200px;
   }
 
   .deployButton, .inputField{
