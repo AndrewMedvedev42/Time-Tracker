@@ -1,7 +1,7 @@
 :root{
   --radius-value:50px;
   --input-section-border-thiknes:calc(8px/2);
-  --main-color:coral;
+  --main-color:purple;
 }
 
 *{
